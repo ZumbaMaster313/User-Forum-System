@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rubik');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+    -webkit-tap-highlight-color: rgba(225, 225, 225, 0);
+}
+
+body{
+    background-color: #363E48;
+    background-image: none;
+}
+
+/*.signUpLocation{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.wrapper{
+    background-color: #434C57;
+    width: 250px;
+    height: 200px;
+    padding: 30px 30px;
+    border-radius: 0px;
+    border-radius: 12px;
+}
+*/
