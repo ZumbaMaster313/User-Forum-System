@@ -4,60 +4,71 @@
   <title>Sign Up</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/index.css">
+  <link href="{{ url_for('static', filename='stylesheets/index.css') }}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      jQuery('.btnSignUp').click(function(event){
+        var ar = [('[name="email"]'), ('[name="username"]'), ('[name="password"]'), ('[name="confirm"]')];
+        var v = [('[name="email"]').val(), ('[name="username"]').val(), ('[name="password"]').val(), ('[name="confirm"]').val()];
+       
+        if(v.every(v.length > 0)){
+          alert("hello");
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-    <!--<div class="logoLocation">
-        <img src="./images/iconpop.png" alt="userIcon" width=50 height="50">
-    </div>-->
     <div class="logo">
         <p class="popIcon">pop</p>
         <i> 
-          <img src="./images/iconpopper-Recovered.png" alt="userIcon" width="80" height="80">
+          <img src="./static/images/iconpopper-Recovered.png" alt="userIcon" width="80" height="80">
         </i>
       </div>
     <div class="signUpLocation">
         <div class="wrapper">
           <div class="prompt">
-            <p class="signUpPrompt">Create Account</p>
+            <p class="signUpPrompt">create account</p>
           </div>
-          <div class="emailBox">
-            <p>
-              <input class="input" placeholder="Email" type="email" name="email" autocomplete="off">
-            </p>
-            <i class="emailIcon">
-              <img src="./images/iconEmail.png" alt="userIcon" width="24" height="24">
-            </i>
-          </div>
-          <div class="inputBox">
-            <p>
-              <input class="input" placeholder="Username" type="username" name="username" autocomplete="off">
-            </p>
-            <i class="userIcon">
-              <img src="./images/username3.png" alt="userIcon" width="13" height="15">
-            </i>
-          </div>
-          <div class="inputBox">
-            <p>
-              <input class="input" placeholder="Password" type="password" name="passwor" autocomplete="off">
-            </p>
-            <i class="passwordIcon">
-              <img src="./images/passwordIcon.png" alt="userIcon" width="13" height="15">
-            </i>
-          </div>
-          <div class="inputBox">
-            <p>
-              <input class="input" placeholder="Confirm Password" type="password" name="confirm" autocomplete="off">
-            </p>
-            <i class="confirmBox">
-              <img src="./images/passwordIcon.png" alt="userIcon" width="13" height="15">
-            </i>
-          </div>
-          <div class="submitBox"> 
-            <p>
-              <input class="btnSignUp" name="submit" value="Sign Up" type="submit" style="border-radius: 5px; border: 1px;">
-            </p>
-          </div>
+            <div class="emailBox">
+              <p>
+                <input class="input" placeholder="Email" type="email" name="email" autocomplete="off">
+              </p>
+              <i class="emailIcon">
+                <img src="./static/images/iconEmail.png" alt="userIcon" width="24" height="24">
+              </i>
+            </div>
+            <div class="inputBox">
+              <p>
+                <input class="input" placeholder="Username" type="username" name="username" autocomplete="off">
+              </p>  
+              <i class="userIcon">
+                <img src="./static/images/username3.png" alt="userIcon" width="13" height="15">
+              </i>
+            </div>
+            <div class="inputBox">
+              <p>
+                <input class="input" placeholder="Password" type="password" name="password" autocomplete="off">
+              </p>
+              <i class="passwordIcon">
+                <img src="./static/images/passwordIcon.png" alt="userIcon" width="13" height="15">
+              </i>
+            </div>
+            <div class="inputBox">
+              <p>
+                <input class="input" placeholder="Confirm Password" type="password" name="confirm" autocomplete="off">
+              </p>
+              <i class="confirmBox">
+                <img src="./static/images/passwordIcon.png" alt="userIcon" width="13" height="15">
+              </i>
+            </div>
+            <div class="submitBox"> 
+              <p>
+                <input class="btnSignUp" name="submit" value="Sign Up" type="submit" style="border-radius: 5px; border: 1px;">
+              </p>
+            </div>
           <div class="devider"></div>
           <div class="halfDevider"></div>
           <div class="otherprompy">
@@ -66,7 +77,7 @@
           <div class="faceBookBtn">
             <input class="faceSignUp" name="submit" value="           Log in with Facebook" type="submit" style="border-radius: 5px; border: 1px;">
             <i class="facebookIcon">
-                <img src="./images/facebook.png" alt="userIcon" width="23" height="23">
+                <img src="./static/images/facebook.png" alt="userIcon" width="23" height="23">
             </i>
           </div>
         </div>
